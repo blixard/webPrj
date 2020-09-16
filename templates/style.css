@@ -1,0 +1,117 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    font: 1.6rem Helvetica;
+    height: 100vh;
+    margin: 0%;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    "header" 
+    "main" 
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+
+}
+.header{
+    grid-area: header;
+    background-color: black;
+    color: azure;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+.header:hover{ 
+    background-color:rgb(34, 34, 34);
+    color: black;
+}
+.brand a{
+    color: antiquewhite;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.brand a:hover{
+    color: plum;
+}
+.header-links a{
+    color: azure;
+    text-decoration: none;
+}
+.header-links a:hover{
+    color: aqua;
+}
+.main{
+    grid-area: main;
+}
+.footer:hover{
+    background-color: antiquewhite;
+    color: black;
+}
+.footer{
+    grid-area: footer;
+    background-color: rgb(41, 25, 19); 
+    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Sidebar*/
+.brand button{
+    font-size: 3rem;
+    padding: .5rem;
+    background: none;
+    border: none;
+    color: azure;
+    cursor: pointer;
+
+}
+
+.brand button:hover{
+    color: rgb(207, 148, 236);
+}
+
+.sidebar{
+    background-color: darkorchid;
+    color: black;
+    position: fixed;
+    transform: translateX(-30rem);
+    width: 30rem;
+    height: 100%;
+}
+.sidebar a{
+    text-decoration: none;
+    color: black;
+
+}
+.sidebar.open{
+    transform: translateX(0);
+}
+.sidebar-close-button{
+    border-radius: 50%;
+    border: .1rem black solid;
+    width: 3rem;
+    height: 3rem;
+    padding: .5rem;
+    font-size: 2rem;
+    padding-top: 0;
+    cursor: pointer;
+    position: absolute;
+    right: .5rem;
+    top: 1.5rem;
+
+}
+.sidebar-close-button:hover{
+    background-color: black;
+    color: red;
+}
+.sidebar a:hover{
+    color: aqua;
+}
